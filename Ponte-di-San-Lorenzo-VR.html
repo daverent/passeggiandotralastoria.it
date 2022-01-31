@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href=images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+  <meta charset="utf-8">
+  <title>Tour Ponte di San Lorenzo</title>
+  <meta name="description" content="Tour virtuale di una vista del Ponte di San Lorenzo.">
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLYDMCTVXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-PLYDMCTVXY');
+  </script>
+
+  <!-- Image link template to be reused. -->
+  <script id="link" type="text/html">
+    <a-entity class="link" geometry="primitive: plane; height: 0.66; width: 1.58" material="shader: flat; src: ${thumb}"
+      event-set__mouseenter="scale: 1.5 1.5 1" event-set__mouseleave="scale: 1 1 1"
+      sound="on: click; src: #click-sound"></a-entity>
+  </script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="sfondo" src="images/vr/ponte.jpg">
+      <img id="thumb-albero" src="images/vr/thumb-albero.jpg">
+      <img id="thumb-ponte" src="images/vr/thumb-ponte.jpg">
+      <img id="thumb-torrione" src="images/vr/thumb-torrione.jpg">
+    </a-assets>
+
+    <!-- 360-degree image. -->
+    <a-sky id="image-360" radius="10" src="#sfondo"
+      animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
+      animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade">
+    </a-sky>
+
+    <!-- Image links. -->
+    <a-entity id="link-ponte" link="on: click; href: Ponte-di-San-Lorenzo.html" layout="type: line; margin: 0"
+      position="0 0 -5" rotation="0 0 0">
+      <a-entity template="src: #link" data-src="#sfondo" data-thumb="#thumb-ponte"></a-entity>
+    </a-entity>
+
+    <a-entity id="link-albero" link="on: click; href: Albero-Secolare-VR.html" layout="type: line; margin: 0"
+      position="-5 1.25 2.5" rotation="0 114.5 0">
+      <a-entity template="src: #link" data-src="#sfondo" data-thumb="#thumb-albero"></a-entity>
+    </a-entity>
+
+    <a-entity id="link-torrione" link="on: click; href: Torrione-di-San-Lorenzo.html" layout="type: line; margin: 0"
+      position="5 3.2 0" rotation="10 270 0">
+      <a-entity template="src: #link" data-src="#sfondo" data-thumb="#thumb-torrione"></a-entity>
+    </a-entity>
+
+    <!-- Camera + cursor. -->
+    <a-camera>
+      <a-cursor id="cursor"
+        animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+        animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+        event-set__mouseenter="_event: mouseenter; color: springgreen"
+        event-set__mouseleave="_event: mouseleave; color: black" raycaster="objects: .link"></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
+
+</html>
