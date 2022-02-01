@@ -1,5 +1,5 @@
 .u-section-1 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/chisiamo/header.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/chisiamo/header.avif"), url("images/chisiamo/header.jpg");
   background-position: 50% 50%;
 }
 
@@ -72,7 +72,7 @@
 .u-section-2 .u-image-1 {
   width: 197px;
   height: 197px;
-  background-image: url("images/foto_team/matt-pres.jpg");
+  background-image: url("images/foto_team/matt-pres.avif"), url("images/foto_team/matt-pres.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -139,7 +139,7 @@
 .u-section-2 .u-image-2 {
   width: 197px;
   height: 197px;
-  background-image: url("images/foto_team/cap-pres.jpg");
+  background-image: url("images/foto_team/cap-pres.avif"), url("images/foto_team/cap-pres.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -194,7 +194,7 @@
 .u-section-2 .u-image-3 {
   width: 197px;
   height: 197px;
-  background-image: url("images/foto_team/ceka-pres.jpg");
+  background-image: url("images/foto_team/ceka-pres.avif"), url("images/foto_team/ceka-pres.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -249,7 +249,7 @@
 .u-section-2 .u-image-4 {
   width: 197px;
   height: 197px;
-  background-image: url("images/foto_team/drink-pres.jpg");
+  background-image: url("images/foto_team/drink-pres.avif"), url("images/foto_team/drink-pres.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -304,7 +304,7 @@
 .u-section-2 .u-image-5 {
   width: 197px;
   height: 197px;
-  background-image: url("images/foto_team/giz-pres.jpg");
+  background-image: url("images/foto_team/giz-pres.avif"), url("images/foto_team/giz-pres.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -359,7 +359,7 @@
 .u-section-2 .u-image-6 {
   width: 197px;
   height: 197px;
-  background-image: url("images/foto_team/mart-pres.jpg");
+  background-image: url("images/foto_team/mart-pres.avif"), url("images/foto_team/mart-pres.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -414,7 +414,7 @@
 .u-section-2 .u-image-7 {
   width: 197px;
   height: 197px;
-  background-image: url("images/foto_team/dan-pres.jpg");
+  background-image: url("images/foto_team/dan-pres.avif"), url("images/foto_team/dan-pres.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -469,7 +469,7 @@
 .u-section-2 .u-image-8 {
   width: 197px;
   height: 197px;
-  background-image: url("images/foto_team/nico-pres.jpg");
+  background-image: url("images/foto_team/nico-pres.avif"), url("images/foto_team/nico-pres.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -524,7 +524,7 @@
 .u-section-2 .u-image-9 {
   width: 197px;
   height: 197px;
-  background-image: url("images/foto_team/pri-pres.jpg");
+  background-image: url("images/foto_team/pri-pres.avif"), url("images/foto_team/pri-pres.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
