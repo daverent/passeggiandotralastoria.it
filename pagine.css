@@ -6060,6 +6060,7 @@ a {
 
 .u-input-rectangle {
   border-radius: 0;
+  margin-bottom: 2%
 }
 
 .u-form-select-wrapper {
@@ -40206,7 +40207,7 @@ blockquote {
 }
 
 .u-header .u-nav-4 {
-  font-size: 1.25rem;
+  box-shadow: 1px 1px 8px 0 rgba(51, 51, 51, 1);
 }
 
 .u-header .u-nav-5 {
